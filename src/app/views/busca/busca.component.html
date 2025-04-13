@@ -1,0 +1,17 @@
+<h1 class="page-title">Busca de Créditos</h1>
+
+<div class="search-container">
+  <div class="search-tabs">
+    <div class="search-tab" [ngClass]="{'active': tipoDeBusca === 'nfse'}" (click)="setTipoDeBusca('nfse')">
+      Buscar por NFS-e
+    </div>
+    <div class="search-tab" [ngClass]="{'active': tipoDeBusca === 'credito'}" (click)="setTipoDeBusca('credito')">
+      Buscar por Nº do Crédito
+    </div>
+  </div>
+  
+  <div class="search-form">
+    <input type="text" class="search-input" [placeholder]="getPlaceholder()" [(ngModel)]="numeroBusca">
+    <button class="search-button" (click)="buscar()" [disabled]="!numeroBusca.trim()">Buscar</button>
+  </div>
+</div>

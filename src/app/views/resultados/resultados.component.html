@@ -1,0 +1,39 @@
+<div class="results-container">
+    <div class="results-title">
+      <span>Resultados da busca: </span>
+      <span class="results-count">{{ creditosLista.length }} créditos encontrados</span>
+    </div>
+  
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th>Nº do Crédito</th>
+          <th>NFS-e</th>
+          <th>Data da Constituição</th>
+          <th>Valor Issqn</th>
+          <th>Tipo do Crédito</th>
+          <th>Simples Nacional</th>
+          <th>Aliquota</th>
+          <th>Valor Faturado</th>
+          <th>Valor Dedução</th>
+          <th>Base Cálculo</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let credito of creditosLista">
+          <td>{{ credito.numeroCredito }}</td>
+          <td>{{ credito.numeroNfse }}</td>
+          <td>{{ credito.dataConstituicao | date:'dd/MM/yyyy' }}</td>
+          <td>{{ credito.valorIssqn | currency:'BRL':'symbol-narrow' }}</td>
+          <td>{{ credito.tipoCredito }}</td>
+          <td>{{ credito.simplesNacional }}</td>
+          <td>{{ credito.aliquota | number:'1.2-2' }} %</td>
+          <td>{{ credito.valorFaturado | currency:'BRL':'symbol-narrow' }}</td>
+          <td>{{ credito.valorDeducao | currency:'BRL':'symbol-narrow' }}</td>
+          <td>{{ credito.baseCalculo | currency:'BRL':'symbol-narrow' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,44 @@
+# Dependências do Node
+/node_modules/
+
+# Diretórios de build
+/dist/
+/out-tsc/
+
+# Arquivos de log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Diretórios do editor (como VSCode)
+.vscode/
+
+# Arquivos de configuração do Angular
+.angular/
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração do IDE
+.idea/
+
+# Arquivos gerados pelo sistema operacional
+*.swp
+*.swo
+
+# Arquivos gerados por ferramentas de testes (como o Karma)
+/coverage/
+
+# Arquivos gerados por ferramentas de build (como o Terser)
+*.tsbuildinfo
+
+# Arquivos gerados pelo TypeScript
+*.js
+*.d.ts
+
+# Arquivos gerados durante o processo de build
+*.map
+
+# Arquivos de configuração do Jest
+jest-config.js

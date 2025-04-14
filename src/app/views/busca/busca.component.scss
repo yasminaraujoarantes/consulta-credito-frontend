@@ -72,4 +72,13 @@
     .search-form {
       flex-direction: column;
     }
+  
+    .search-input,
+    .search-button {
+      width: 100%;
+    }
+  
+    .search-button {
+      padding: 1rem;
+    }
   }
